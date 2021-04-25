@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace ToDoAppApi
 {
-    public class ToDoDto
+    public class TaskDto
     {
         public int Id { get; set; }
         public string Name { get; set; }

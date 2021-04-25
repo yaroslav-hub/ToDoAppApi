@@ -15,21 +15,21 @@ namespace ToDoAppApi.Controllers
         ToDoRepository repository = new();
         // GET: api/<ValuesController>
         [HttpGet]
-        public List<ToDoDto> Get()
+        public List<TaskDto> Get()
         {
             return repository.GetAll();
         }
 
         // POST api/<ValuesController>
         [HttpPost]
-        public int Post([FromBody] ToDoDto toDoDto)
+        public int Post([FromBody] TaskDto toDoDto)
         {
             return repository.Create(toDoDto);
         }
 
         // PUT api/<ValuesController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] ToDoDto toDoDto)
+        public void Put(int id, [FromBody] TaskDto toDoDto)
         {
             repository.Update(id, toDoDto);
         }
